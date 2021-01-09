@@ -11,6 +11,3 @@ cd build
 make
 make install
 cd ..
-
-mkdir -p ../infistd/lib/osx/arm/
-cp -r build/src/libglfw.dylib ../infistd/lib/osx/arm/

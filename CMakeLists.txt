@@ -2,6 +2,11 @@ cmake_minimum_required(VERSION 3.1...3.17 FATAL_ERROR)
 
 project(GLFW VERSION 3.4.0 LANGUAGES C)
 
+#set(CROSS_COMPILE_DIR_X11 "/opt/fsl-imx-x11/4.1.15-2.1.0/sysroots/cortexa9hf-neon-poky-linux-gnueabi")
+#set(CMAKE_FIND_ROOT_PATH ${CROSS_COMPILE_DIR_X11}/usr/include)
+#set(CMAKE_PREFIX_PATH ${CROSS_COMPILE_DIR_X11}/usr/lib/cmake)
+#set(CMAKE_LIBRARY_PATH ${CROSS_COMPILE_DIR_X11}/usr/lib)  
+
 set(CMAKE_LEGACY_CYGWIN_WIN32 OFF)
 
 if (POLICY CMP0054)
@@ -22,10 +27,11 @@ if ("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
     set(GLFW_STANDALONE TRUE)
 endif()
 
+
 option(BUILD_SHARED_LIBS "Build shared libraries" ON)
-option(GLFW_BUILD_EXAMPLES "Build the GLFW example programs" OFF) #${GLFW_STANDALONE})
-option(GLFW_BUILD_TESTS "Build the GLFW test programs" OFF)# ${GLFW_STANDALONE})
-option(GLFW_BUILD_DOCS "Build the GLFW documentation" OFF)
+option(GLFW_BUILD_EXAMPLES "Build the GLFW example programs" ${GLFW_STANDALONE})
+option(GLFW_BUILD_TESTS "Build the GLFW test programs" OFF) #${GLFW_STANDALONE})
+option(GLFW_BUILD_DOCS "Build the GLFW documentation" OFF) #ON)
 option(GLFW_INSTALL "Generate installation target" ON)
 option(GLFW_VULKAN_STATIC "Assume the Vulkan loader is linked with the application" OFF)
 
