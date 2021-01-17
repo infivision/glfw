@@ -451,3 +451,9 @@ skills.
  - All the unmentioned and anonymous contributors in the GLFW community, for bug
    reports, patches, feedback, testing and encouragement
 
+
+# guanmingtao
+sudo apt-get install libxrandr-dev
+sudo apt-get install libxinerama-dev
+sudo apt-get install libxcursor-dev
+sudo apt-get install libxi-dev

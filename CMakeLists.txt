@@ -21,6 +21,10 @@ if (POLICY CMP0077)
     cmake_policy(SET CMP0077 NEW)
 endif()
 
+if (POLICY CMP0079)
+    cmake_policy(SET CMP0079 NEW)
+endif()
+
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 if ("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
