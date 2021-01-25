@@ -2,6 +2,7 @@
 rm -rf build/
 INFI_OS=linux
 INFI_ARCH=arm
+build_type=release
 
 source ./build_project_inc.sh
 
